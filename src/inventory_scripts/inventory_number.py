@@ -21,16 +21,17 @@ def is_valid_inv_number_and_year(value: str) -> bool:
 def get_year_and_number(inventory_number: str) -> (int, int):
     match = __get_match(inventory_number)
     if match is not None:
-        return int(match.group(1)), int(match.group(3)) + int(match.group(2)) * 1000
+        return int(match.group(1)), \
+               int(match.group(3)) + int(match.group(2)) * 1000
     else:
         return None, None
 
 
 def __get_match(value: str) -> re.Match:
     # TODO compile cette regex
-    inventory_pattern = re.search(r'^([2-9][0-9]{3})-([0-9]{3})-([0-9]{3})$', value)
-    return inventory_pattern
+    return re.search(r'^([2-9][0-9]{3})-([0-9]{3})-([0-9]{3})$', value)
 
 
 def build_inventory_number(year: int, num: int) -> str:
-    return "{:04d}-{:03d}-{:03d}".format(year, math.floor(num / 1000), (num % 1000))
+    return "{:04d}-{:03d}-{:03d}".format(year, math.floor(num / 1000),
+                                         (num % 1000))

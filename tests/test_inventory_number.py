@@ -1,7 +1,10 @@
 # ----------------------------------------------------------------------------------------------------------------------
 # gen_inv_num.py - Musée Bolo (c) by C. Gaudin - Generate Inventory Number
 # ----------------------------------------------------------------------------------------------------------------------
-from src.inventory_scripts.inventory_number import *
+from src.inventory_scripts.inventory_number import is_valid_inventory_number
+from src.inventory_scripts.inventory_number import is_valid_inv_number_and_year
+from src.inventory_scripts.inventory_number import get_year_and_number
+from src.inventory_scripts.inventory_number import build_inventory_number
 import unittest
 
 
@@ -42,7 +45,8 @@ class TestBoloInventoryNumber(unittest.TestCase):
         self.assertIsNone(number)
 
     def test_generate(self):
-        self.assertEqual("2020-111-222", build_inventory_number(2020, 111222))
+        inventory_str = build_inventory_number(2020, 111222)
+        self.assertEqual("2020-111-222", inventory_str)
 
 
 if __name__ == '__main__':
