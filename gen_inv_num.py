@@ -3,7 +3,7 @@
 # gen_inv_num.py - Musée Bolo (c) by C. Gaudin - Generate Inventory Number 
 # ----------------------------------------------------------------------------------------------------------------------
 import sys
-from src.inventory_number import inventory_number
+from src.inventory_scripts import inventory_number
 
 
 def usage():
