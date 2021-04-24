@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------------------------------------------------
 # gen_inv_num.py - Musée Bolo (c) by C. Gaudin - Generate Inventory Number
 # ----------------------------------------------------------------------------------------------------------------------
-from inventory_number import *
+from src.inventory_number.inventory_number import *
 import unittest
 
 

@@ -3,7 +3,7 @@
 # gen_inv_num.py - Musée Bolo (c) by C. Gaudin - Generate Inventory Number 
 # ----------------------------------------------------------------------------------------------------------------------
 import sys
-import inventory_number
+from src.inventory_number import inventory_number
 
 
 def usage():
@@ -25,6 +25,6 @@ if __name__ == "__main__":
 	page_count = int(sys.argv[2])
 
 	for i in range(page_count*84):
-		num = inventory_number.build_inventory_number(inv_year, inv_num+i)
+		num = inventory_number.build_inventory_number(inv_year, inv_num + i)
 		print("{}".format(num))
 
