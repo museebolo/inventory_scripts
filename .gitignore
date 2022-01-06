@@ -1,0 +1,5 @@
+dist/
+build/
+*.pyc
+src/inventory_scripts.egg-info/
+venv/
