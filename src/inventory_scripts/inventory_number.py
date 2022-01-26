@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-# gen_inv_num.py - Musée Bolo (c) by C. Gaudin
+# inventory_number.py - Musée Bolo (c) by C. Gaudin
 # ----------------------------------------------------------------------------------------------------------------------
 import re
 import datetime
@@ -15,7 +15,7 @@ def is_valid_inv_number_and_year(value: str) -> bool:
     if inventory_pattern is None:
         return False
     year = int(inventory_pattern.group(1))
-    return datetime.date.today().year >= year >= 2020
+    return datetime.date.today().year >= year >= 2018
 
 
 def get_year_and_number(inventory_number: str) -> (int, int):
