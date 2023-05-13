@@ -1,6 +1,6 @@
 # Scriptes de génération d'étiquettes pour l'inventaire
 
-##  .py - générateur de numéro d'inventaire
+##  gen_inv_num.py - générateur de numéro d'inventaire
 
 Il s'agit d'un scripte en python 3 pour construire un fichier .csv contenant le numéro d'inventaire à imprimer.
 
@@ -33,7 +33,7 @@ Ce logiciel est disponible dans la plupart des distributions linux, il existe au
  1. Ouvrir le fichier 'qrcode.glabels' (Menu Fichier -> Ouvrir).
  2. Ensuite sélectionner le bon fichier .csv (Menu Objects -> Propriétés de fusion)
  3. Mettre le poids du papier en 200g mat sur l'imprimante de ruchonet
- 4. attention le papier a un bord a 32mm et un autre a 33 (il faut l'orienter juste dans l'imprimante)
+ 4. attention le papier a un bord a 32mm et un autre a 33 (il faut l'orienter juste dans l'imprimante) le 32 mm va en bas dans l'imprimante
  3. Imprimer (Menu Imprimer ...). 
  
 **NOTES IMPORTANTES:** 
